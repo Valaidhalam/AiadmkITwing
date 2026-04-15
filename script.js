@@ -1,56 +1,36 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // Navbar scroll effect
-    const navbar = document.getElementById('navbar');
-    
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
+// ── Navbar scroll behaviour ──
+const navbar = document.getElementById('navbar');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 60) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+});
+
+// ── Intersection Observer for reveal animations ──
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
         }
     });
+}, {
+    threshold: 0.12,
+    rootMargin: '0px 0px -40px 0px'
+});
 
-    // Intersection Observer for scroll animations
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.15
-    };
+document.querySelectorAll('.hidden').forEach(el => observer.observe(el));
 
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('show');
-                // Optional: Stop observing once element is visible
-                // observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-
-    // Staggered animation for hero elements
-    const heroElements = document.querySelectorAll('.hero .hidden');
-    heroElements.forEach((el, index) => {
-        el.style.transitionDelay = `${index * 150}ms`;
-        setTimeout(() => {
-            el.classList.add('show');
-        }, 100); // Small initial delay
+// ── Stagger children inside cards-grid ──
+document.querySelectorAll('.cards-grid').forEach(grid => {
+    grid.querySelectorAll('.card').forEach((card, i) => {
+        card.style.transitionDelay = `${i * 80}ms`;
     });
+});
 
-    // Animating other sections
-    const hiddenElements = document.querySelectorAll('.hidden:not(.hero .hidden)');
-    hiddenElements.forEach((el, index) => {
-        observer.observe(el);
-    });
-
-    // Special staggering for cards
-    const cards = document.querySelectorAll('.card.hidden');
-    cards.forEach((card, index) => {
-        card.style.transitionDelay = `${(index % 3) * 100}ms`; // Stagger rows
-    });
-    
-    // Navbar sequence show
-    setTimeout(() => {
-        navbar.classList.add('show');
-        navbar.classList.remove('hidden');
-    }, 1000);
+// ── Stagger leader cards in tier2 ──
+document.querySelectorAll('.tier2-cards .lcard').forEach((card, i) => {
+    card.style.transitionDelay = `${i * 120}ms`;
 });

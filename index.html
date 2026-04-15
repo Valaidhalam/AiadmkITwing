@@ -5,87 +5,174 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>R. மணி MLA - செய்த வேலைகளே பேசும்</title>
-    <meta name="description" content="ஒமலூர் தொகுதி எம்.எல்.ஏ R. மணி அவர்களின் சாதனைகள் மற்றும் மக்கள் நலத்திட்டங்கள்.">
+    <meta name="description" content="ஓமலூர் தொகுதி எம்.எல்.ஏ R. மணி அவர்களின் சாதனைகள் மற்றும் மக்கள் நலத்திட்டங்கள்.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+Tamil:wght@300;400;600;800;900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&family=Noto+Sans+Tamil:wght@300;400;600;800;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="background-effects">
-        <div class="glow-orb orb-1"></div>
-        <div class="glow-orb orb-2"></div>
-        <div class="glow-orb orb-3"></div>
-    </div>
 
-    <nav class="navbar hidden" id="navbar">
+    <!-- ───── NAVBAR ───── -->
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <h1 class="logo"><span class="white-text">R.</span> <span class="red-text">மணி</span> <span
-                    class="white-text">MLA</span></h1>
+            <h1 class="logo"><span class="logo-r">R.</span> <span class="logo-mani">மணி</span> <span
+                    class="logo-mla">MLA</span></h1>
             <ul class="nav-links">
                 <li><a href="#home">முகப்பு</a></li>
+                <li><a href="#leaders">தலைமை</a></li>
                 <li><a href="#deeds">சாதனைகள்</a></li>
-                <li><a href="#vision">தீர்வு</a></li>
+                <li><a href="#vision">தொடர்பு</a></li>
             </ul>
+            <button class="nav-cta"
+                onclick="document.getElementById('deeds').scrollIntoView({behavior:'smooth'})">சாதனைகள் காண</button>
         </div>
     </nav>
 
-    <header id="home" class="hero">
-        <div class="hero-content">
 
-            <div class="hero-leaders hidden">
-                <div class="leader-card">
-                    <img src="edapaddiiar.jpg" alt="அண்ணன் எடப்பாடியார்">
-                    <h4>எங்கள் அண்ணன் எடப்பாடியார்</h4>
+    <!-- ───── HERO ───── -->
+    <header id="home" class="hero">
+        <!-- Premium Atmospheric Background -->
+        <div class="hero-bg">
+            <div class="hero-glow-orb orb-red"></div>
+            <div class="hero-glow-orb orb-black"></div>
+            <div class="hero-swash"></div>
+            <div class="hero-flag-wave"></div>
+        </div>
+
+        <!-- Heritage corner images -->
+        <div class="hero-heritage corner-left hidden">
+            <img src="leaders-removebg-preview.png" alt="Legacy Leaders">
+        </div>
+        <div class="hero-heritage corner-right hidden">
+            <img src="leaders-removebg-preview.png" alt="Legacy Leaders">
+        </div>
+
+        <div class="hero-inner">
+            <div class="hero-text-block hidden">
+                <div class="hero-tag">AIADMK · ஓமலூர் தொகுதி</div>
+                <h1 class="hero-title aiadmk-split">வெற்று வார்த்தைகள் அல்ல...<br>வெற்றிச் செயல்கள்!</h1>
+                <p class="hero-sub">ஓமலூர் தொகுதி மக்களின் வாழ்க்கையை மாற்றிய<br>உண்மையான பணிகளின் கதை.</p>
+                <a href="#deeds" class="btn-primary">
+                    சாதனைகளை காண
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="12" y1="5" x2="12" y2="19" />
+                        <polyline points="19 12 12 19 5 12" />
+                    </svg>
+                </a>
+            </div>
+
+            <div class="hero-stats hidden">
+                <div class="stat-badge">
+                    <div class="stat-num">12+</div>
+                    <div class="stat-label">ஆண்டுகள் சேவை</div>
                 </div>
-                <div class="party-symbol">
-                    <img src="aiadmk.png" alt="இரட்டை இலை">
+                <div class="stat-badge">
+                    <div class="stat-num">50K+</div>
+                    <div class="stat-label">பயனடைந்த மக்கள்</div>
                 </div>
-                <div class="leader-card">
-                    <!-- Pointing directly to the user's local standard mla.jpg -->
-                    <img src="mla.jpg" alt="R. மணி MLA">
-                    <h4>எங்கள் அண்ணன் R. மணி</h4>
+                <div class="stat-badge">
+                    <div class="stat-num">120+</div>
+                    <div class="stat-label">திட்டங்கள்</div>
+                </div>
+                <div class="stat-badge">
+                    <div class="stat-num">10K+</div>
+                    <div class="stat-label">மாணவர்களுக்கு பலன்</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="party-flag-strip"></div>
+    </header>
+
+    <!-- ───── LEADERSHIP SECTION ───── -->
+    <section id="leaders" class="leaders-section">
+        <div class="section-header hidden">
+            <h2 class="aiadmk-split">நம் தலைவர்கள்</h2>
+            <p>AIADMK கட்சியின் உறுதியான தலைமையில் ஓமலூர் தொகுதி முன்னேறுகிறது</p>
+        </div>
+
+        <div class="leaders-tree">
+            <!-- Tier 1 -->
+            <div class="tree-tier tier-1">
+                <div class="lcard lcard-primary hidden">
+                    <div class="lcard-img-wrap red-ring">
+                        <img src="edapaddiiar.jpg" alt="அண்ணன் எடப்பாடியார்"
+                            onerror="this.parentElement.innerHTML='<div class=\'av-placeholder av-red\'>EPS</div>'">
+                    </div>
+                    <div class="lcard-body">
+                        <h4>அண்ணன் எடப்பாடியார்</h4>
+                        <span class="lcard-role">பொதுச் செயலாளர்</span>
+                        <span class="lcard-badge badge-red">AIADMK</span>
+                    </div>
                 </div>
             </div>
 
-            <h1 class="hero-title hidden">
-                வெற்று வார்த்தைகள் அல்ல... <span class="highlight">வெற்றிச் செயல்கள்!</span>
-            </h1>
-            <p class="hero-subtitle hidden">
-                ஆதாரம் இல்லாத குற்றச்சாட்டுகளை வைத்து மக்களை தவறாக வழிநடத்த முடியாது. <br>
-                <strong>செய்த வேலைகளே பேசும்…</strong>
-            </p>
-            <p class="hero-text hidden">
-                பொய்யான குற்றச்சாட்டுகள் எதற்கும் பயன்படாது. ஒமலூர் தொகுதி மக்களின் பேராதரவோடு மக்கள் பணி தொடரும்.
-            </p>
-            <a href="#deeds" class="btn-primary hidden">சாதனைகளை காண <svg xmlns="http://www.w3.org/2000/svg" width="20"
-                    height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="12" y1="5" x2="12" y2="19"></line>
-                    <polyline points="19 12 12 19 5 12"></polyline>
-                </svg></a>
-        </div>
-    </header>
+            <!-- Connector + Party logo -->
+            <div class="tree-connector">
+                <div class="conn-line-v"></div>
+                <div class="party-logo-node hidden">
+                    <img src="aiadmk.png" alt="AIADMK" onerror="this.style.display='none'">
+                </div>
+                <div class="conn-line-v"></div>
+            </div>
 
+            <!-- Tier 2 -->
+            <div class="tree-tier tier-2">
+                <div class="conn-line-h"></div>
+                <div class="tier2-cards">
+                    <div class="lcard lcard-primary hidden">
+                        <div class="lcard-img-wrap black-ring">
+                            <img src="elango.png" alt="அண்ணன் இளங்கோவன்"
+                                onerror="this.parentElement.innerHTML='<div class=\'av-placeholder av-black\'>IG</div>'">
+                        </div>
+                        <div class="lcard-body">
+                            <h4>அண்ணன் இளங்கோவன்</h4>
+                            <span class="lcard-role">மாவட்ட செயலாளர்</span>
+                            <span class="lcard-badge badge-black">சேலம்</span>
+                        </div>
+                    </div>
+
+                    <div class="lcard lcard-secondary hidden">
+                        <div class="lcard-img-wrap red-ring">
+                            <img src="omalurmla.jpg" alt="அண்ணன் R. மணி MLA"
+                                onerror="this.parentElement.innerHTML='<div class=\'av-placeholder av-red\'>RM</div>'">
+                        </div>
+                        <div class="lcard-body">
+                            <h4>அண்ணன் R. மணி MLA</h4>
+                            <span class="lcard-role">சட்டமன்ற உறுப்பினர்</span>
+                            <span class="lcard-badge badge-red">ஓமலூர்</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="conn-line-h"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ───── ACHIEVEMENTS SECTION ───── -->
     <section id="deeds" class="achievements-section">
         <div class="section-header hidden">
-            <h2>எம்.எல்.ஏ <span class="red-text">R. மணி</span> அவர்களின் சாதனைகள்</h2>
-            <p>ஒமலூர் தொகுதி மக்களின் வாழ்வாதாரத்தை மேம்படுத்த செய்துள்ள தலைசிறந்த பணிகள்</p>
+            <span class="section-eyebrow">சாதனைகள்</span>
+            <h2 class="aiadmk-split">எம்.எல்.ஏ R. மணி அவர்களின் சாதனைகள்</h2>
+            <p>மக்களின் அனைத்து சுக துக்க நிகழ்வுகளிலும் பங்கேற்றுள்ளார்.</p>
+            <p>ஓமலூர் தொகுதி மக்களின் வாழ்வாதாரத்தை மேம்படுத்த செய்துள்ள தலைசிறந்த பணிகள்</p>
         </div>
 
-        <!-- Category 1: Water Management -->
+        <!-- Water Management -->
         <div class="service-category hidden">
             <h3 class="category-title">நீர் மேலாண்மை (Water Management)</h3>
             <div class="cards-grid">
                 <div class="card card-featured hidden">
                     <div class="card-content">
                         <div class="card-badge">முன்னெடுப்பு திட்டம்</div>
-                        <div class="card-main-stat">120+</div>
+                        <div class="card-main-stat aiadmk-split">120+</div>
                         <h3>மேல்நிலை நீர்த்தேக்கத் தொட்டிகள்</h3>
-                        <p>ஒமலூர் தொகுதி முழுவதும் நீர் தடையின்றி கிடைக்க 120-க்கும் மேற்பட்ட பிரம்மாண்ட நீர்த்தேக்கத்
+                        <p>ஓமலூர் தொகுதி முழுவதும் நீர் தடையின்றி கிடைக்க 120-க்கும் மேற்பட்ட பிரம்மாண்ட நீர்த்தேக்கத்
                             தொட்டிகள் அமைக்கப்பட்டு ஊர் தோறும் குடிநீர் வழங்கப்படுகிறது.</p>
                         <div class="card-footer-info">
                             <span class="impact-badge">பெரிதும் பயனடைந்த 50,000+ மக்கள்</span>
@@ -93,18 +180,16 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="card card-dark hidden">
                     <div class="card-content">
                         <div class="card-icon">🚰</div>
                         <div class="card-title-stat">நிரந்தர தீர்வு</div>
-                        <h3>ஒமலூர் குடிநீர் திட்டம்</h3>
-                        <p>பல ஆண்டுகளாக நிலவி வந்த குடிநீர் தட்டுப்பாட்டை போக்கி, ஒமலூர் மக்களுக்கு நிம்மதியான வாழ்வை
+                        <h3>ஓமலூர் குடிநீர் திட்டம்</h3>
+                        <p>பல ஆண்டுகளாக நிலவி வந்த குடிநீர் தட்டுப்பாட்டை போக்கி, ஓமலூர் மக்களுக்கு நிம்மதியான வாழ்வை
                             வழங்கிய வரலாற்று சிறப்புமிக்க திட்டம்.</p>
                         <span class="category-tag">மக்கள் சேவை</span>
                     </div>
                 </div>
-
                 <div class="card card-red hidden">
                     <div class="card-content">
                         <div class="card-icon">💧</div>
@@ -118,7 +203,7 @@
             </div>
         </div>
 
-        <!-- Category 2: Education -->
+        <!-- Education -->
         <div class="service-category hidden">
             <h3 class="category-title">கல்வி மற்றும் குழந்தைகள் நலன் (Education & Welfare)</h3>
             <div class="cards-grid">
@@ -135,7 +220,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="card card-white hidden">
                     <div class="card-content">
                         <div class="card-icon">🪑</div>
@@ -146,7 +230,6 @@
                         <span class="category-tag">உள்கட்டமைப்பு</span>
                     </div>
                 </div>
-
                 <div class="card card-dark hidden">
                     <div class="card-content">
                         <div class="card-icon">👶</div>
@@ -160,14 +243,14 @@
             </div>
         </div>
 
-        <!-- Category 3: Infrastructure -->
+        <!-- Infrastructure -->
         <div class="service-category hidden">
             <h3 class="category-title">கட்டமைப்பு மற்றும் சுகாதாரம் (Infrastructure & Health)</h3>
             <div class="cards-grid">
                 <div class="card card-featured hidden">
                     <div class="card-content">
                         <div class="card-badge">வேகமான வளர்ச்சி</div>
-                        <div class="card-main-stat">BT ROADS</div>
+                        <div class="card-main-stat aiadmk-split">BT ROADS</div>
                         <h3>தரமான தார் சாலைகள்</h3>
                         <p>கிராமப்புற மற்றும் நகர்ப்புற போக்குவரத்து வசதியை மேம்படுத்த, நீண்ட காலம் உழைக்கும் உயர்தர
                             தார் சாலைகள் அனைத்து குக்கிராமங்களுக்கும் போடப்பட்டுள்ளன.</p>
@@ -177,7 +260,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="card card-red hidden">
                     <div class="card-content">
                         <div class="card-icon">🏥</div>
@@ -188,7 +270,6 @@
                         <span class="category-tag">சுகாதாரம்</span>
                     </div>
                 </div>
-
                 <div class="card card-dark hidden">
                     <div class="card-content">
                         <div class="card-icon">🏪</div>
@@ -201,24 +282,63 @@
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- <section id="vision" class="closing-section hidden">
-        <div class="closing-content glass-panel">
-            <h2 class="closing-title">இவை எல்லாம் யார் செய்தது?</h2>
-            <p class="closing-subtitle">எங்கள் அண்ணன் <strong class="red-text">R. மணி MLA</strong> அவர்கள் செய்தது !</p>
-            <div class="closing-statement">
-                <h3>பொய்கள் அல்ல… வேலை தான் பேசும்!</h3>
+        <!-- Social Welfare -->
+        <div class="service-category hidden">
+            <h3 class="category-title">சமூக நலம் மற்றும் மக்கள் தொடர்பு (Social Welfare)</h3>
+            <div class="cards-grid">
+                <div class="card card-featured hidden">
+                    <div class="card-content">
+                        <div class="card-badge">நேரடி தொடர்பு</div>
+                        <div class="card-icon" style="font-size: 4rem; margin-bottom: 1rem;">🤝</div>
+                        <h3>மக்களுடன் என்றும் இணைந்திருப்பவர்</h3>
+                        <p>மக்களின் அனைத்து சுக துக்க நிகழ்வுகளிலும் பங்கேற்று, அவர்களின் குறைகளை கேட்டறிந்து
+                            உடனுக்குடன் தீர்வு கண்டு வருகிறார்.</p>
+                        <div class="card-footer-info">
+                            <span class="impact-badge">உண்மையான மக்கள் பிரதிநிதி</span>
+                            <span class="category-tag">சமூக சேவை</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card-white hidden">
+                    <div class="card-content">
+                        <div class="card-icon">🗳️</div>
+                        <div class="card-title-stat">மக்களின் குரல்</div>
+                        <h3>குறைதீர்க்கும் முகாம்கள்</h3>
+                        <p>ஓமலூர் தொகுதி மக்களின் அடிப்படை தேவைகளை பூர்த்தி செய்ய தொடர்ச்சியாக சிறப்பு குறைதீர்க்கும்
+                            முகாம்கள் நடத்தப்படுகின்றன.</p>
+                        <span class="category-tag">மக்கள் தொடர்பு</span>
+                    </div>
+                </div>
+                <div class="card card-red hidden">
+                    <div class="card-content">
+                        <div class="card-icon">🎁</div>
+                        <div class="card-title-stat">நலத்திட்ட உதவிகள்</div>
+                        <h3>அரசு நலத்திட்டங்கள்</h3>
+                        <p>முதியோர் உதவித்தொகை, திருமண உதவித்தொகை உள்ளிட்ட அனைத்து அரசு நலத்திட்டங்களும் தகுதியுடைய
+                            அனைவருக்கும் கிடைக்க வழிவகை செய்யப்பட்டுள்ளது.</p>
+                        <span class="category-tag">மக்கள் நலன்</span>
+                    </div>
+                </div>
             </div>
         </div>
-    </section> -->
+    </section>
 
+
+    <!-- ───── FOOTER ───── -->
     <footer>
         <div class="footer-content">
-            <div class="footer-logo"><span class="white-text">R.</span> <span class="red-text">மணி</span> <span
-                    class="white-text">MLA</span></div>
-            <p>&copy; 2026 ஒமலூர் தொகுதி. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.</p>
+            <div class="footer-logo">
+                <span class="aiadmk-split">R.</span> <span class="aiadmk-split">மணி</span> <span
+                    class="aiadmk-split">MLA</span>
+            </div>
+            <p>© 2026 ஓமலூர் தொகுதி. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.</p>
             <div class="party-footer">அனைத்திந்திய அண்ணா திராவிட முன்னேற்றக் கழகம்</div>
+            <div class="footer-flag">
+                <span class="f-black"></span>
+                <span class="f-white"></span>
+                <span class="f-red"></span>
+            </div>
         </div>
     </footer>
 
