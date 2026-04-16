@@ -333,6 +333,57 @@ body {
     max-width: 800px;
 }
 
+/* MLA Profile Signature */
+.mla-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2.5rem;
+    animation: fadeInUp 1.4s ease-out;
+}
+
+.mla-photo-wrap {
+    width: 320px;
+    height: 320px;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 4px solid #fff;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
+    background: #fff;
+    transition: transform 0.3s ease;
+}
+
+.mla-photo-wrap:hover {
+    transform: scale(1.03);
+}
+
+.mla-photo-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.mla-name {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--text-main);
+    margin: 0;
+    line-height: 1.2;
+    letter-spacing: 0.3px;
+}
+
+.mla-credits {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--accent-red);
+    font-weight: 700;
+    margin-top: 6px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
 .btn-primary {
     display: inline-flex;
     align-items: center;
