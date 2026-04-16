@@ -487,10 +487,10 @@ body {
 .party-logo-node {
     width: 72px;
     height: 72px;
-    border-radius: 50%;
-    background: #fff;
-    border: 2px solid rgba(218, 41, 28, 0.3);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border-radius: 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -568,7 +568,7 @@ body {
 }
 
 .lcard-img-wrap {
-    border-radius: 50%;
+    border-radius: 0;
     margin: 0 auto 1rem;
     overflow: hidden;
     display: flex;
@@ -591,22 +591,22 @@ body {
     height: 100%;
     object-fit: cover;
     object-position: center 10%;
-    border-radius: 50%;
+    border-radius: 0;
 }
 
 .red-ring {
-    box-shadow: 0 0 0 3px var(--accent-red), 0 4px 16px rgba(218, 41, 28, 0.2);
+    box-shadow: none;
 }
 
 .black-ring {
-    box-shadow: 0 0 0 3px #222, 0 4px 16px rgba(0, 0, 0, 0.15);
+    box-shadow: none;
 }
 
 /* Avatar placeholders */
 .av-placeholder {
     width: 100%;
     height: 100%;
-    border-radius: 50%;
+    border-radius: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1056,7 +1056,8 @@ footer p {
     }
 
     .nav-links {
-        display: none; /* Keep hidden on small phones to prevent clutter, but keep nav clean */
+        display: none;
+        /* Keep hidden on small phones to prevent clutter, but keep nav clean */
     }
 
     .nav-container {
@@ -1135,7 +1136,8 @@ footer p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.25rem; /* Little bit down as requested */
+    gap: 0.25rem;
+    /* Little bit down as requested */
     margin-bottom: 2.5rem;
     position: relative;
     z-index: 10;
@@ -1151,28 +1153,54 @@ footer p {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1.25rem; /* Space for the logo between photos */
+    gap: 1.25rem;
+    /* Space for the logo between photos */
     animation: fadeInUp 1.2s ease-out;
 }
 
 .crest-logo {
-    width: 70px;
-    height: 70px;
+    width: 100px;
+    height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #fff;
-    border-radius: 50%;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
     padding: 10px;
     z-index: 5;
     transition: transform 0.4s ease;
-    border: 2px solid #eee;
+    border: none;
 }
 
 .crest-logo:hover {
     transform: scale(1.1) rotate(10deg);
     border-color: var(--accent-red);
+}
+
+.eps-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.1);
+    /* was scale(2.4) — way too zoomed */
+    object-position: center 10%;
+}
+
+.elango-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.1);
+    object-position: center 15%;
+}
+
+.mani-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.0);
+    object-position: center 0%;
 }
 
 .crest-logo img {
@@ -1194,29 +1222,36 @@ footer p {
 }
 
 .hero-crest .lcard-img-wrap {
-    width: 110px;
-    height: 110px;
+    width: 130px;
+    height: 130px;
+    overflow: hidden;
     margin: 0;
     transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero-crest .lcard-primary .lcard-img-wrap {
-    width: 140px;
-    height: 140px;
+    width: 150px;
+    height: 150px;
 }
 
 @media (max-width: 768px) {
     .crest-base {
         gap: 1.25rem;
     }
+
     .crest-logo {
         width: 65px;
         height: 65px;
     }
+
     .hero-crest .lcard-img-wrap {
         width: 85px;
         height: 85px;
     }
+
     .hero-crest .lcard-primary .lcard-img-wrap {
         width: 115px;
         height: 115px;
@@ -1228,22 +1263,27 @@ footer p {
         gap: 0.15rem;
         margin-bottom: 2rem;
     }
+
     .crest-base {
         gap: 0.75rem;
     }
+
     .crest-logo {
         width: 55px;
         height: 55px;
         padding: 8px;
     }
+
     .hero-crest .lcard-img-wrap {
         width: 72px;
         height: 72px;
     }
+
     .hero-crest .lcard-primary .lcard-img-wrap {
         width: 100px;
         height: 100px;
     }
+
     .hero-text-block h1 {
         font-size: 1.8rem;
     }
